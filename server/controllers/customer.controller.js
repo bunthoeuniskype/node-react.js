@@ -36,6 +36,7 @@ exports.findAll = (req, res) => {
               err.message || "Some error occurred while retrieving customers."
           });
         else res.send(data);
+        // res.render('customers/index', { data: data });
       });
 };
 
