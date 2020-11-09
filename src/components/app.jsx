@@ -40,13 +40,13 @@ const [usersList, setUsersList] = useState([])
     <div className="app">
       <header className="app-header">
         {/* Display welcome message */}
-        <p>{welcomeMessage}</p>
+        <p>List Customers</p>
 
         {/* Button to fetch users data */}
     
 
         {/* Display table of users after fetching users data */}
-        {usersList.length > 0 && <table>
+        {usersList && usersList.length > 0 && <table>
           <thead>
             <tr>
               <th>ID</th>

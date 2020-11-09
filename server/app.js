@@ -8,7 +8,7 @@ const compression = require('compression')
 const helmet = require('helmet')
 const cors = require('cors')
 
-var usersRouter = require('./routes/users');
+var usersRouter = require('./routes/users.routes');
 var customersRouter = require('./routes/customer.routes');
 
 var app = express();
@@ -60,7 +60,7 @@ app.use(function(err, req, res, next) {
   // render the error page
   res.status(err.status || 500);
   console.log('err', err);
-  res.render('error');
+  res.sendFile('views/error.html', { root: __dirname })
 });
 
 module.exports = app;
